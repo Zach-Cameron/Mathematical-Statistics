@@ -1,0 +1,160 @@
+% https://mirror.math.princeton.edu/pub/CTAN/macros/latex/required/amscls/doc/amsthdoc.pdf
+% The following list summarizes the types of structures which are normally associated with each theorem style:
+% plain: Theorem, Lemma, Corollary, Proposition, Conjecture, Criterion, Assertion
+% definition: Definition, Condition, Problem, Example, Exercise, Algorithm, Question, Axiom, Property, Assumption, Hypothesis
+% remark: Remark, Note, Notation, Claim, Summary, Acknowledgment, Case, Conclusion
+
+%%%%%%%%%
+% Default
+%%%%%%%%%
+% \theoremstyle{plain}
+% \theoremheaderfont{\normalfont\bfseries}
+% \theorembodyfont{\itshape}
+% \theoremseparator{}
+% \theorempreskip{\topsep}
+% \theorempostskip{\topsep}
+% \theoremframepreskip{\topsep}
+% \theoremframepostskip{\topsep}
+% \theoreminframepreskip{\topsep}
+% \theoreminframepostskip{\topsep}
+% \theoremindent0cm
+% \theoremnumbering{arabic}
+% \theoremsymbol{\ensuremath{}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%
+% Theorem
+%%%%%%%%%
+\theoremstyle{changebreak}
+\theoremheaderfont{\kern-1.5em\normalfont\bfseries}
+\theorembodyfont{\itshape}
+\theoremseparator{}
+\theorempreskip{1.5em}
+\theorempostskip{0em}
+\theoremframepreskip{1em}
+\theoremframepostskip{0em}
+\theoreminframepreskip{0em}
+\theoreminframepostskip{0em}
+\theoremindent1.5em
+\theoremnumbering{arabic}
+\theoremsymbol{\ensuremath{}}
+
+\newframedtheorem{thrm}{Theorem}[section]
+\newtheorem{coro}{Corollary}[thrm]
+\newtheorem{lemm}[thrm]{Lemma}
+
+\newtheorem{prop}{Proposition}[section]
+\newtheorem{conj}{Conjecture}[section]
+\newtheorem{crit}{Criterion}[section]
+\newtheorem{asrt}{Assertion}[section]
+
+%%%%%%%%%%%%%%%%%%%%
+% Theorem Unnumbered
+%%%%%%%%%%%%%%%%%%%%
+\theoremstyle{nonumberbreak}
+\theoremheaderfont{\kern-1.5em\normalfont\bfseries}
+\theorembodyfont{\itshape}
+\theoremseparator{}
+\theorempreskip{1.5em}
+\theorempostskip{0em}
+\theoremframepreskip{1em}
+\theoremframepostskip{0em}
+\theoreminframepreskip{0em}
+\theoreminframepostskip{0em}
+\theoremindent1.5em
+\theoremnumbering{arabic}
+\theoremsymbol{\ensuremath{}}
+
+%%%%%%%%%%%%
+% Definition
+%%%%%%%%%%%%
+\theoremstyle{changebreak}
+\theoremheaderfont{\kern-1.5em\normalfont\bfseries}
+\theorembodyfont{}
+\theoremseparator{.}
+\theorempreskip{1em}
+\theorempostskip{0em}
+\theoremframepreskip{0.5em}
+\theoremframepostskip{0em}
+\theoreminframepreskip{0em}
+\theoreminframepostskip{0em}
+\theoremindent1.5em
+\theoremnumbering{arabic}
+\theoremsymbol{\ensuremath{}}
+
+\shadecolor{black!15}
+\newshadedtheorem{defn}{Definition}[section]
+\newtheorem{cond}{Condition}[section]
+\newtheorem{prob}{Problem}[section]
+\newtheorem{exmp}{Example}[section]
+\newtheorem{exrc}{Exercise}[section]
+\newtheorem{algo}{Algorithm}[section]
+\newtheorem{ques}{Question}[section]
+\newtheorem{axio}{Axiom}[section]
+\newtheorem{prty}{Property}[section]
+\newtheorem{asum}{Assumption}[section]
+\newtheorem{hypo}{Hypothesis}[section]
+
+%%%%%%%%%%%%%%%%%%%%%%%
+% Definition Unnumbered
+%%%%%%%%%%%%%%%%%%%%%%%
+\theoremstyle{nonumberbreak}
+\theoremheaderfont{\kern-1.5em\normalfont\bfseries}
+\theorembodyfont{}
+\theoremseparator{.}
+\theorempreskip{1em}
+\theorempostskip{0em}
+\theoremframepreskip{0.5em}
+\theoremframepostskip{0em}
+\theoreminframepreskip{0em}
+\theoreminframepostskip{0em}
+\theoremindent1.5em
+\theoremnumbering{arabic}
+\theoremsymbol{\ensuremath{}}
+
+%%%%%%%%
+% Remark
+%%%%%%%%
+\theoremstyle{changebreak}
+\theoremheaderfont{\kern-1.5em\itshape}
+\theorembodyfont{}
+\theoremseparator{.}
+\theorempreskip{0.5em}
+\theorempostskip{0em}
+\theoremframepreskip{0em}
+\theoremframepostskip{0em}
+\theoreminframepreskip{0em}
+\theoreminframepostskip{0em}
+\theoremindent3em
+\theoremnumbering{arabic}
+\theoremsymbol{\ensuremath{\square}}
+
+\newtheorem{rmrk}{Remark}[section]
+\newtheorem{note}{Note}[section]
+\newtheorem{nota}{Notation}[section]
+\newtheorem{clam}{Claim}[section]
+\newtheorem{summ}{Summary}[section]
+\newtheorem{aknw}{Acknowledgement}[section]
+\newtheorem{case}{Case}[section]
+\newtheorem{conc}{Conclusion}[section]
+\newtheorem{desc}{Description}[section]
+
+%%%%%%%%%%%%%%%%%%%
+% Remark Unnumbered
+%%%%%%%%%%%%%%%%%%%
+\theoremstyle{nonumberbreak}
+\theoremheaderfont{\kern-1.5em\itshape}
+\theorembodyfont{}
+\theoremseparator{.}
+\theorempreskip{0.5em}
+\theorempostskip{0em}
+\theoremframepreskip{0em}
+\theoremframepostskip{0em}
+\theoreminframepreskip{0em}
+\theoreminframepostskip{0em}
+\theoremindent3em
+\theoremnumbering{arabic}
+\theoremsymbol{\ensuremath{\square}}
+
+\newtheorem{proof}{Proof}
+\newtheorem{soln}{Solution}

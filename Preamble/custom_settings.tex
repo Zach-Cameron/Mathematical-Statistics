@@ -1,0 +1,37 @@
+% Starts section numbering at 0.
+%\setcounter{section}{-1}
+
+% Removes indentation.
+%\setlength{\parindent}{0in}
+
+% Removes section numbering but keeps sections in the Table of Contents.
+%\setcounter{secnumdepth}{0} 
+
+% graphicx: Sets default path for images.
+\graphicspath{{./Images/}}
+
+% enumitem: Remove left margin of lists.
+%\setlist{leftmargin=*}
+
+% imakeidx: Keeps fancyhdr settings on Index page.
+\indexsetup{firstpagestyle=fancy}
+
+% imakeidx: Adds the Index to the ToC.
+\makeindex[intoc]
+
+% hyperref settings
+\hypersetup{
+    colorlinks = true,
+    linkcolor = black,
+    urlcolor = blue
+}
+
+% Draws frames around section numbers.
+\makeatletter
+\def\@seccntformat#1{\@ifundefined{#1@cntformat}
+    {\csname the#1\endcsname\space}
+    {\csname #1@cntformat\endcsname}}
+\newcommand\section@cntformat{\fbox{\thesection}\hspace{0.5em}}       
+\newcommand\subsection@cntformat{\fbox{\thesubsection}\hspace{0.5em}}
+\newcommand\subsubsection@cntformat{\fbox{\thesubsubsection}\hspace{0.5em}}
+\makeatother

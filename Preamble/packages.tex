@@ -1,0 +1,88 @@
+\usepackage[english]{babel}
+% https://ctan.org/pkg/babel
+% Usage: Establish document language.
+
+\usepackage[margin=0.618in,includehead,includefoot]{geometry}
+% https://ctan.org/pkg/geometry
+% Usage: Adjust margin size.
+
+\usepackage[nopatch=eqnum]{microtype}
+% https://ctan.org/pkg/microtype
+% Usage: Provides a variety of micro-typographical adjustments.
+
+\usepackage{fancyhdr}
+% https://ctan.org/pkg/fancyhdr
+% Usage: Write headers and footers.
+
+\usepackage{datetime2}
+% https://www.ctan.org/pkg/datetime2
+% Usage: Provide commands to get the current date and time.
+
+\usepackage[parfill]{parskip}
+%https://ctan.org/pkg/parskip
+% Usage: Helps with vertical spacing.
+
+\usepackage{mathtools, amssymb}
+% https://tex.stackexchange.com/a/32103
+% https://ctan.org/pkg/mathtools
+% https://ctan.org/pkg/amsfonts
+% Usage: Write mathematical expressions and symbols.
+
+\usepackage[ntheorem]{empheq}
+% https://ctan.org/pkg/empheq
+% Usage: Align equations.
+
+\usepackage[framed,amsmath,thmmarks,thref,hyperref]{ntheorem}
+% https://ctan.org/pkg/ntheorem
+% Usage: Define and write theorem-like environments.
+% See Preamble/environments.tex for enviroment definitions.
+
+\usepackage{framed}
+% https://ctan.org/pkg/framed
+% Usage: \newframedtheorem in ntheorem environments.
+
+\usepackage{pstricks-add}
+% If you do something that needs pstricks, 
+%     then compile in something other than pdfLaTeX.
+% https://www.ctan.org/pkg/pstricks-base
+% Usage: \newshadedtheorem in ntheorem environments.
+
+\usepackage[shortlabels]{enumitem}
+% https://ctan.org/pkg/enumitem
+% Usage: Write lists.
+
+\usepackage{booktabs}
+% https://ctan.org/pkg/booktabs
+% Usage: Make tables.
+
+\usepackage{graphicx}
+% https://ctan.org/pkg/graphicx
+% Usage: Insert images.
+
+\usepackage{tikz}
+% https://www.ctan.org/pkg/pgf
+% Usage: Render graphics.
+
+\usepackage{wrapfig}
+% https://www.ctan.org/pkg/wrapfig
+% Usage: Wrap text around figures and tables.
+
+\usepackage{multicol}
+% https://ctan.org/pkg/multicol
+% Usage: Render text in multiple columns.
+
+\usepackage{imakeidx}
+% https://ctan.org/pkg/imakeidx
+% Usage: Render an index.
+
+\usepackage{lipsum}
+% https://ctan.org/pkg/lipsum
+% Usage: Render Lorem Ipsum text for prototyping.
+
+%%%%%%%%%%%%%%%%%%%%%
+\usepackage{hyperref}
+% "Make sure it comes last of your loaded packages, 
+% to give it a fighting chance of not being over-written, 
+% since its job is to redefine many LATEX commands."
+% https://www.ctan.org/pkg/hyperref
+% Usage: Insert hyperlinks in text. Make the TOC entries links.
