@@ -27,11 +27,7 @@
 }
 
 % Draws frames around section numbers.
+% Taken from LaTeX Companion 2nd ed pg 26.
 \makeatletter
-\def\@seccntformat#1{\@ifundefined{#1@cntformat}
-    {\csname the#1\endcsname\space}
-    {\csname #1@cntformat\endcsname}}
-\newcommand\section@cntformat{\fbox{\thesection}\hspace{0.5em}}       
-\newcommand\subsection@cntformat{\fbox{\thesubsection}\hspace{0.5em}}
-\newcommand\subsubsection@cntformat{\fbox{\thesubsubsection}\hspace{0.5em}}
+\renewcommand\@seccntformat[1]{\fbox{\csname the#1\endcsname}\hspace{0.5em}}
 \makeatother
