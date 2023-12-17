@@ -26,8 +26,10 @@ The following notes are from \href{https://www.isbns.fm/isbn/9780495110811/}{\te
     Given data set $[2.1,2.4,2.2,2.3,2.7,2.5,2.4,2.6.2.6,2.9]$ we can construct the \textbi{relative frequency histogram}:
 
     \begin{figure}[h]
+        \vspace{-10pt}
         \centering
-        \input{Images/exmp1.1.tex}
+        \input{Images/note1.1.tex}
+        \vspace{-20pt}
         \caption{Relative Frequency Histogram}
         \label{fig:rfh}
     \end{figure}
@@ -62,22 +64,80 @@ The following notes are from \href{https://www.isbns.fm/isbn/9780495110811/}{\te
 \subsection{Characterizing a Set of Measurements: Numerical Methods}
 
 \begin{defn}[\idx{mean}]
-    Given a data set $[y_{1}, y_{2}, \ldots, y_{n}]$, the \textbi{mean} of the data set is given by: $$\bar{y} = \frac{1}{n} \sum_{i=1}^{n} y_{i}$$
+    Given a data set $[y_{1}, y_{2}, \ldots, y_{n}]$, the \textbi{mean} of the data set is given by: $$\mu = \bar{y} = \frac{1}{n} \sum_{i=1}^{n} y_{i}$$
 \end{defn}
 
-\begin{nota}[\idx{$\bar{y}$}]
-    When the data set is a sample, the mean is denoted $\bar{y}$, read ``y bar''.
+\begin{nota}[\idx{$\mu$}, \idx{population mean}]
 \end{nota}
 
-\begin{nota}[\idx{$\mu$}]
-    When the data set is a population, the mean is denoted $\mu$.
+\begin{nota}[\idx{$\bar{y}$}, \idx{sample mean}]
+    Read ``y bar''.
 \end{nota}
 
 \begin{defn}[\idx{population variance}]
     Given a population $[y_{1}, y_{2}, \ldots, y_{n}]$, the \textbi{population variance} of the population is given by: $$\sigma^{2} = \frac{1}{n} \sum_{i=1}^{n} (y_{i} - \mu)^{2}$$
 \end{defn}
 
+\begin{nota}[\idx{$\sigma^{2}$}, \idx{population variance}]
+\end{nota}
+
 \pagebreak
 \begin{defn}[\idx{sample variance}]
     Given a sample $[y_{1}, y_{2}, \ldots, y_{n}]$, the \textbi{sample variance} of the population is given by: $$s^{2} = \frac{1}{n-1} \sum_{i=1}^{n} (y_{i} - \bar{y})^{2}$$
 \end{defn}
+
+\begin{nota}[\idx{$s^{2}$}, \idx{sample variance}]
+\end{nota}
+
+\begin{defn}[\idx{standard deviation}]
+    \begin{itemize}
+        \item Given a population, a \textbi{standard deviation} of the population is given by $\sigma = \sqrt{\sigma^{2}}$ where $\sigma^{2}$ is the population variance.
+        \item Given a sample, the \textbi{standard deviation} of the sample is given by $s = \sqrt{s^{2}}$ where $s^{2}$ is the sample variance.
+    \end{itemize}
+\end{defn}
+
+\begin{nota}[\idx{$\sigma$}, \idx{standard deviation}]
+\end{nota}
+
+\begin{note}[\idx{Empirical Rule}]
+    For a distribution of measurements that is approximately normal (bell-shaped):
+    \begin{itemize}
+        \item the interval $\mu \pm \sigma$ contains approx. $68\%$ of measurements
+        \item the interval $\mu \pm 2\sigma$ contains approx. $95\%$ of measurements
+        \item the interval $\mu \pm 3\sigma$ contains approx. almost all measurements
+    \end{itemize}
+
+    \begin{figure}[h]
+        \vspace{-40pt}
+        \centering
+        \input{Images/note1.3.tex}
+        \vspace{-40pt}
+        \caption{Empirical Rule}
+        \label{fig:emprule}
+    \end{figure}
+\end{note}
+
+\begin{lemm}
+    $$s^{2} = \frac{1}{n-1} \sum_{i=1}^{n} (y_{i} - \bar{y})^{2} = \frac{1}{n-1} \left[\sum_{i=1}^{n} y_{i}^{2} - \frac{1}{n} \left(\sum_{i=1}^{n} y_{i}\right)^{2}\right]$$
+\end{lemm}
+
+\begin{proof}
+    \begin{align*}
+        s^{2} &= \frac{1}{n-1} \sum_{i=1}^{n} (y_{i} - \bar{y})^{2}\\
+              &= \frac{1}{n-1} \sum_{i=1}^{n} (y_{i}^{2} -2\bar{y} y_{i} + \bar{y}^{2})\\
+              &= \frac{1}{n-1} \left[\sum_{i=1}^{n} y_{i}^{2} -2\bar{y} \sum_{i=1}^{n} y_{i} + \sum_{i=1}^{n} \bar{y}^{2}\right]\\
+              &= \frac{1}{n-1} \left[\sum_{i=1}^{n} y_{i}^{2} -2n\bar{y}^{2} + n\bar{y}^{2}\right]\\
+              &= \frac{1}{n-1} \left[\sum_{i=1}^{n} y_{i}^{2} -n\bar{y}^{2}\right]\\
+              &= \frac{1}{n-1} \left[\sum_{i=1}^{n} y_{i}^{2} -n\left(\frac{1}{n} \sum_{i=1}^{n} y_{i}\right)^{2}\right]\\
+              &= \frac{1}{n-1} \left[\sum_{i=1}^{n} y_{i}^{2} -\frac{1}{n}\left(\sum_{i=1}^{n} y_{i}\right)^{2}\right]\\    
+    \end{align*}
+\end{proof}
+
+\begin{defn}[\idx{range}]
+    Given a data set, the \textbi{range} of the data set is the difference between the largest and smallest values of the data set. 
+\end{defn}
+
+\begin{note}[\idx{Quarter Range Rule}]
+    Since $\sim 95\%$ -- i.e. most -- of all normally-distributed measurements lie within two standard deviations from the mean, standard deviation can be estimated as \nicefrac{1}{4} the range of the measurements.
+\end{note}
+
